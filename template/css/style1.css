@@ -1,0 +1,249 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#hero {
+    background-image: url('../resource/cafebiru.jpg'); /* Jalur relatif yang benar */
+    background-size: cover;
+    background-position: center;
+    padding: 150px 0;
+    text-align: center;
+    position: relative;
+    color: white;
+    min-height: 400px; /* Sesuaikan tinggi minimum jika perlu */
+    display: flex; /* Menambahkan flexbox */
+    flex-direction: column; /* Mengatur arah kolom */
+    justify-content: center; /* Menyeimbangkan konten secara vertikal */
+    align-items: center; /* Menyeimbangkan konten secara horizontal */
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0; /* Menempatkan overlay di belakang konten */
+}
+
+.hero-container {
+    position: relative;
+    z-index: 1; /* Menempatkan konten di atas overlay */
+}
+
+#hero h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    text-align: center; /* Memastikan teks judul berada di tengah */
+}
+
+#hero p {
+    font-size: 24px;
+    margin-bottom: 40px;
+    text-align: center; /* Memastikan teks deskripsi berada di tengah */
+}
+
+
+.hero-btn {
+    padding: 12px 30px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.hero-btn:hover {
+    background-color: #0056b3;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px; /* Memberi jarak antar item menu */
+}
+
+.menu-item {
+    flex: 1;
+    max-width: 30%; /* Mengatur lebar maksimum tiap item menu */
+    margin: 10px;
+    text-align: center;
+}
+
+.menu-item img {
+    width: 100%;
+    height: 300px; /* Sesuaikan tinggi yang diinginkan */
+    object-fit: cover; /* Menjaga gambar tetap utuh dan sesuai */
+    border-radius: 10px;
+}
+
+/* Responsive layout untuk layar yang lebih kecil */
+@media (max-width: 768px) {
+    .menu-item {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+}
+
+
+.container {
+    max-width: 900px; /* Menetapkan lebar maksimum untuk konten */
+    margin: auto; /* Memusatkan konten dalam halaman */
+    padding: 0 20px; /* Menambahkan padding untuk sisi */
+}
+/* Kontainer untuk form pemesanan */
+.pemesanan-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+.pemesanan-container form {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.pemesanan-container label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.pemesanan-container input[type="text"],
+.pemesanan-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.pemesanan-container textarea {
+    height: 100px;
+    resize: none;
+}
+
+.pemesanan-container button {
+    padding: 12px 30px;
+    background-color: #007bff;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pemesanan-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Gaya untuk judul utama (Kafe Biru) */
+.header-container {
+    text-align: center;
+    background-color: #280872; /* Warna biru */
+    padding: 30px 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-container h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    margin: 0;
+}
+
+/* Gaya untuk sub-heading di bawah Kafe Biru */
+.sub-heading-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Jarak antar teks */
+    margin-top: 20px;
+    flex-wrap: wrap;
+    background-color: #280872; /* Latar belakang biru yang sama */
+    padding: 10px 0;
+}
+
+.sub-heading {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px; /* Ukuran font lebih kecil */
+    color: white; /* Warna teks putih agar kontras dengan latar belakang biru */
+    margin: 0;
+    text-transform: uppercase; /* Semua teks kapital */
+    text-decoration: none; /* Hilangkan garis bawah pada link */
+    padding: 5px 10px;
+    transition: background-color 0.3s ease; /* Animasi saat hover */
+}
+
+.sub-heading:hover {
+    background-color: #1b0658; /* Warna biru lebih gelap saat di-hover */
+    border-radius: 5px; /* Tambahkan sudut melengkung saat di-hover */
+}
+
+/* Responsif: Untuk layar kecil */
+@media (max-width: 768px) {
+    .sub-heading-container {
+        flex-direction: column; /* Agar vertikal di layar kecil */
+        align-items: center;
+    }
+
+    .sub-heading {
+        margin-bottom: 10px;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #280872;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+}
+
+footer .socials {
+    margin-top: 10px;
+}
+
+footer .socials a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+footer .socials a:hover {
+    text-decoration: underline;
+}
+
+/* Bagian Hero untuk layar kecil */
+@media (max-width: 768px) {
+    #hero {
+        padding: 100px 10px; /* Mengurangi padding pada layar kecil */
+    }
+
+    #hero h1 {
+        font-size: 32px;
+    }
+
+    #hero p {
+        font-size: 18px;
+    }
+
+    .hero-btn {
+        font-size: 16px;
+    }
+}
